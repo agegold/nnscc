@@ -65,6 +65,7 @@ class CAR:
   SELTOS_SP2 = "KIA SELTOS (SP2)"
   SOUL_EV_SK3 = "KIA SOUL EV (SK3)"
   MOHAVE_HM = "KIA MOHAVE (HM)"
+  BONGO_EV = "KIA BONGO (EV)"
 
   # GENESIS
   GENESIS_DH = "GENESIS (DH)"
@@ -764,7 +765,7 @@ FEATURES = {
 }
 
 HYBRID_CAR = {CAR.K5_HEV_JF, CAR.IONIQ_HEV_AE, CAR.SONATA_HEV_DN8, CAR.SONATA_HEV_LF, CAR.K7_HEV_YG, CAR.GRANDEUR_HEV_IG, CAR.GRANDEUR_HEV_FL_IG, CAR.NIRO_HEV_DE, CAR.KONA_HEV_OS, CAR.AVANTE_HEV_CN7, CAR.SANTAFE_HEV_TM, CAR.K5_HEV_DL3}
-EV_CAR = {CAR.IONIQ_EV_AE, CAR.KONA_EV_OS, CAR.NIRO_EV_DE, CAR.NEXO_FE, CAR.SOUL_EV_SK3}
+EV_CAR = {CAR.IONIQ_EV_AE, CAR.KONA_EV_OS, CAR.NIRO_EV_DE, CAR.NEXO_FE, CAR.SOUL_EV_SK3, CAR.BONGO_EV}
 
 if Params().get_bool("UseRadarTrack"):
   DBC = {
@@ -817,6 +818,7 @@ if Params().get_bool("UseRadarTrack"):
     CAR.SELTOS_SP2: dbc_dict('hyundai_kia_generic', 'hyundai_kia_mando_front_radar'),
     CAR.SOUL_EV_SK3: dbc_dict('hyundai_kia_generic', 'hyundai_kia_mando_front_radar'),
     CAR.MOHAVE_HM: dbc_dict('hyundai_kia_generic', 'hyundai_kia_mando_front_radar'),
+    CAR.BONGO_EV: dbc_dict('hyundai_kia_generic', 'hyundai_kia_mando_front_radar'),
   }
 else:
   DBC = {
@@ -869,6 +871,7 @@ else:
     CAR.SELTOS_SP2: dbc_dict('hyundai_kia_generic', None),
     CAR.SOUL_EV_SK3: dbc_dict('hyundai_kia_generic', None),
     CAR.MOHAVE_HM: dbc_dict('hyundai_kia_generic', None),
+    CAR.BONGO_EV: dbc_dict('hyundai_kia_generic', None),
   }
 
 STEER_THRESHOLD = int(Params().get("SteerThreshold", encoding="utf8"))
