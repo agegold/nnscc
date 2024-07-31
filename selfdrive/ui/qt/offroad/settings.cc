@@ -396,8 +396,8 @@ void SoftwarePanel::updateLabels() {
   updateBtn->setEnabled(true);
   /*
   gitRemoteLbl->setText(QString::fromStdString(params.get("GitRemote").substr(19)));
-  */
   gitBranchLbl->setText(QString::fromStdString(params.get("GitBranch")));
+  */
   gitCommitLbl->setText(QString::fromStdString(params.get("GitCommit")).left(10));
   osVersionLbl->setText(QString::fromStdString(Hardware::get_os_version()).trimmed());
 }
