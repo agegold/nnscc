@@ -294,7 +294,7 @@ SoftwarePanel::SoftwarePanel(QWidget* parent) : ListWidget(parent) {
   gitBranchLbl = new LabelControl(tr("Git Branch"));
   gitCommitLbl = new LabelControl(tr("Git Commit"));
   osVersionLbl = new LabelControl(tr("OS Version"));
-  versionLbl = new LabelControl(tr("Fork"));
+  /*versionLbl = new LabelControl(tr("Fork"));*/
   lastUpdateLbl = new LabelControl(tr("Last Update Check"), "", "");
   updateBtn = new ButtonControl(tr("Check for Updates"), "");
   connect(updateBtn, &ButtonControl::clicked, [=]() {
