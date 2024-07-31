@@ -350,7 +350,7 @@ SoftwarePanel::SoftwarePanel(QWidget* parent) : ListWidget(parent) {
   connect(parent, SIGNAL(offroadTransition(bool)), uninstallBtn, SLOT(setEnabled(bool)));
 
   /*QWidget *widgets[] = {osVersionLbl, versionLbl, gitRemoteLbl, gitBranchLbl, lastUpdateLbl, updateBtn};*/
-  QWidget *widgets[] = {osVersionLbl, versionLbl, gitBranchLbl, lastUpdateLbl, updateBtn};
+  QWidget *widgets[] = {osVersionLbl, versionLbl, gitRemoteLbl, lastUpdateLbl, updateBtn};
   for (QWidget* w : widgets) {
     addItem(w);
   }
