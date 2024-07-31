@@ -294,7 +294,7 @@ SoftwarePanel::SoftwarePanel(QWidget* parent) : ListWidget(parent) {
   gitBranchLbl = new LabelControl(tr("Git Branch"));
   gitCommitLbl = new LabelControl(tr("Git Commit"));
   osVersionLbl = new LabelControl(tr("OS Version"));
-  /*versionLbl = new LabelControl(tr("Fork"));*/
+  versionLbl = new LabelControl(tr("Fork"));
   lastUpdateLbl = new LabelControl(tr("Last Update Check"), "", "");
   updateBtn = new ButtonControl(tr("Check for Updates"), "");
   connect(updateBtn, &ButtonControl::clicked, [=]() {
@@ -349,8 +349,7 @@ SoftwarePanel::SoftwarePanel(QWidget* parent) : ListWidget(parent) {
   });
   connect(parent, SIGNAL(offroadTransition(bool)), uninstallBtn, SLOT(setEnabled(bool)));
 
-  /*QWidget *widgets[] = {osVersionLbl, versionLbl, gitRemoteLbl, gitBranchLbl, lastUpdateLbl, updateBtn};*/
-  QWidget *widgets[] = {osVersionLbl, versionLbl, lastUpdateLbl, updateBtn};
+  QWidget *widgets[] = {osVersionLbl, versionLbl, gitRemoteLbl, gitBranchLbl, lastUpdateLbl, updateBtn};
   for (QWidget* w : widgets) {
     addItem(w);
   }
