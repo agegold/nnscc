@@ -290,7 +290,7 @@ void DevicePanel::poweroff() {
 }
 
 SoftwarePanel::SoftwarePanel(QWidget* parent) : ListWidget(parent) {
-  /*gitRemoteLbl = new LabelControl(tr("Git Remote"));*/
+  gitRemoteLbl = new LabelControl(tr("Git Remote"));
   gitBranchLbl = new LabelControl(tr("Git Branch"));
   gitCommitLbl = new LabelControl(tr("Git Commit"));
   osVersionLbl = new LabelControl(tr("OS Version"));
@@ -395,9 +395,7 @@ void SoftwarePanel::updateLabels() {
   lastUpdateLbl->setText(lastUpdate);
   updateBtn->setText(tr("CHECK"));
   updateBtn->setEnabled(true);
-  /*
   gitRemoteLbl->setText(QString::fromStdString(params.get("GitRemote").substr(19)));
-  */
   gitBranchLbl->setText(QString::fromStdString(params.get("GitBranch")));
   gitCommitLbl->setText(QString::fromStdString(params.get("GitCommit")).left(10));
   osVersionLbl->setText(QString::fromStdString(Hardware::get_os_version()).trimmed());
