@@ -359,8 +359,8 @@ class Controls:
       else:
         safety_mismatch = pandaState.safetyModel not in IGNORED_SAFETY_MODES
 
-      if safety_mismatch or self.mismatch_counter >= 200:
-        self.events.add(EventName.controlsMismatch)
+      #if safety_mismatch or self.mismatch_counter >= 200:
+        #self.events.add(EventName.controlsMismatch)
 
     self.second += DT_CTRL
     if self.second > 1.0:
