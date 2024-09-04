@@ -66,6 +66,7 @@ class CAR:
   SOUL_EV_SK3 = "KIA SOUL EV (SK3)"
   MOHAVE_HM = "KIA MOHAVE (HM)"
   BONGO_EV = "KIA BONGO (EV)"
+  RAY_EV = "KIA RAY (EV)"
 
   # GENESIS
   GENESIS_DH = "GENESIS (DH)"
@@ -416,6 +417,8 @@ FINGERPRINTS = {
   CAR.BONGO_EV:  [{
     127: 8, 304: 8, 320: 8, 339: 8, 352: 8, 356: 4, 544: 8, 593: 8, 688: 5, 832: 8, 881: 8, 882: 8, 897: 8, 902: 8, 903: 8, 909: 8, 916: 8, 1040: 8, 1042: 8, 1069: 8, 1098: 4, 1102: 8, 1136: 8, 1151: 8, 1155: 8, 1168: 8, 1173: 8, 1193: 8, 1225: 8, 1265: 4, 1280: 1, 1287: 4, 1291: 8, 1292: 8, 1294: 8, 1322: 8, 1342: 6, 1345: 8, 1355: 8, 1363: 8, 1369: 8, 1379: 8, 1394: 8, 1407: 8, 1414: 4, 1426: 8, 1429: 8, 1430: 8, 1456: 4, 1473: 8, 1507: 8, 1535: 8, 1990: 8, 1998: 8, 2004: 8, 2012: 8
   }]
+  CAR.RAY_EV:  [{
+  }]
 }
 
 if Params().get_bool("FingerprintTwoSet"):
@@ -753,7 +756,7 @@ FEATURES = {
   "use_tcu_gears": {CAR.K5_JF, CAR.SONATA_LF, CAR.VELOSTER_JS, CAR.SONATA_TURBO_LF, CAR.STINGER_CK},
   # Use E_GEAR Message for Gear Selection
   "use_elect_gears": {CAR.SONATA_HEV_DN8, CAR.SONATA_HEV_LF, CAR.KONA_EV_OS, CAR.KONA_HEV_OS, CAR.IONIQ_EV_AE, CAR.IONIQ_HEV_AE, CAR.GRANDEUR_HEV_IG, CAR.GRANDEUR_HEV_FL_IG, CAR.NEXO_FE,
-                      CAR.K5_HEV_JF, CAR.K7_HEV_YG, CAR.NIRO_EV_DE, CAR.NIRO_HEV_DE, CAR.SOUL_EV_SK3, CAR.AVANTE_HEV_CN7, CAR.SANTAFE_HEV_TM, CAR.K5_HEV_DL3,  CAR.BONGO_EV},
+                      CAR.K5_HEV_JF, CAR.K7_HEV_YG, CAR.NIRO_EV_DE, CAR.NIRO_HEV_DE, CAR.SOUL_EV_SK3, CAR.AVANTE_HEV_CN7, CAR.SANTAFE_HEV_TM, CAR.K5_HEV_DL3,  CAR.BONGO_EV, CAR.RAY_EV},
 
   # send LFA MFA message for new HKG models
   # Insert your car in this if you want turn LFA icon on.
@@ -768,7 +771,7 @@ FEATURES = {
 }
 
 HYBRID_CAR = {CAR.K5_HEV_JF, CAR.IONIQ_HEV_AE, CAR.SONATA_HEV_DN8, CAR.SONATA_HEV_LF, CAR.K7_HEV_YG, CAR.GRANDEUR_HEV_IG, CAR.GRANDEUR_HEV_FL_IG, CAR.NIRO_HEV_DE, CAR.KONA_HEV_OS, CAR.AVANTE_HEV_CN7, CAR.SANTAFE_HEV_TM, CAR.K5_HEV_DL3}
-EV_CAR = {CAR.IONIQ_EV_AE, CAR.KONA_EV_OS, CAR.NIRO_EV_DE, CAR.NEXO_FE, CAR.SOUL_EV_SK3, CAR.BONGO_EV}
+EV_CAR = {CAR.IONIQ_EV_AE, CAR.KONA_EV_OS, CAR.NIRO_EV_DE, CAR.NEXO_FE, CAR.SOUL_EV_SK3, CAR.BONGO_EV, CAR.RAY_EV}
 
 if Params().get_bool("UseRadarTrack"):
   DBC = {
@@ -822,6 +825,7 @@ if Params().get_bool("UseRadarTrack"):
     CAR.SOUL_EV_SK3: dbc_dict('hyundai_kia_generic', 'hyundai_kia_mando_front_radar'),
     CAR.MOHAVE_HM: dbc_dict('hyundai_kia_generic', 'hyundai_kia_mando_front_radar'),
     CAR.BONGO_EV: dbc_dict('hyundai_kia_generic', 'hyundai_kia_mando_front_radar'),
+    CAR.RAY_EV: dbc_dict('hyundai_kia_generic', 'hyundai_kia_mando_front_radar'),
   }
 else:
   DBC = {
@@ -875,6 +879,7 @@ else:
     CAR.SOUL_EV_SK3: dbc_dict('hyundai_kia_generic', None),
     CAR.MOHAVE_HM: dbc_dict('hyundai_kia_generic', None),
     CAR.BONGO_EV: dbc_dict('hyundai_kia_generic', None),
+    CAR.RAY_EV: dbc_dict('hyundai_kia_generic', None),
   }
 
 STEER_THRESHOLD = int(Params().get("SteerThreshold", encoding="utf8"))
